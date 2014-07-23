@@ -9,19 +9,16 @@ CacheMatrix <- NULL
                 x <<- y
                 CacheMatrix <<- NULL
         }
-        get <- function() { ## Get the value of the matrix
-                x
-        }
-        setmatrix <- function(solve) {##Set the value of the inverse 
-                CacheMatrix <<- solve
-        }
-        getmatrix <- function() {##Get the value of the inverse
-                CacheMatrix
-        }
+        get <- function() x ## Get the value of the matrix
+                
+        setmatrix <- function(solve) CacheMatrix <<- solve ##Set the value of the inverse 
+                
+        getmatrix <- function() CacheMatrix##Get the value of the inverse
+              
         
         list(set=set, get=get,
-           setmatrix=setmatrix,
-             getmatrix=getmatrix)
+        setmatrix=setmatrix,
+        getmatrix=getmatrix)
 }
 
 ## CacheSolve function computes the inverse of the special matrix 
